@@ -9,7 +9,10 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Id;
+import java.io.*;
 
 /**
  *
@@ -26,7 +29,16 @@ public class Usuario implements Serializable {
     private String login;
     private String senha;
     private Funcao funcao;
-  
+    
+    public Usuario (int id, String nome, String login, String senha, Funcao funcao){
+        this.id = id;
+        this.nome = nome;
+        this.login = login;
+        this.senha = senha;
+        this.funcao = funcao;
+    }
+    
+    
     public int getId() {
         return id;
     }
