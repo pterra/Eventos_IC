@@ -28,6 +28,11 @@ public class Usuario implements Serializable {
     private String nome;
     private String login;
     private String senha;
+    private String CPF;
+    private String email;
+    private String curso;
+    private String instituição;
+    private String status_usuario;
     private Funcao funcao;
     
     public Usuario (int id, String nome, String login, String senha, Funcao funcao){
