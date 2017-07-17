@@ -13,6 +13,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Id;
 import java.io.*;
+import java.util.*;
 
 /**
  *
@@ -26,10 +27,17 @@ public class Evento implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nome;
-  
+    private int qtd_participantes;
+    private Date data_evento;
+    private String status_evento;
+    // tipo de evento, local como pk e organizador(partindo de usuario)
     
-    public Evento (int id, String nome, ){
-       
+    public Evento (int id, String nome,int qtd_participantes, Date data_evento, String status_evento ){
+       this.id = id;
+       this.nome = nome;
+       this.qtd_participantes = qtd_participantes;
+       this.data_evento = data_evento;
+       this.status_evento = status_evento;
     }
     
     
@@ -48,7 +56,30 @@ public class Evento implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
+    
+    public int getQtd_participante() {
+        return qtd_participante;
+    }
 
+    public void setQtd_participante(int qtd_participante) {
+        this.qtd_participante = qtd_participante;
+    }
+    
+    public Date getData_evento() {
+        return data_evento;
+    }
+
+    public void setData_evento(Date data_evento) {
+        this.data_evento = data_evento;
+    }
+     
+    public String getStatus_evento() {
+        return status_evento;
+    }
+
+    public void setStatus_evento(String status_evento) {
+        this.status_evento = status_evento;
+    }
     
     @Override
     public int hashCode() {
