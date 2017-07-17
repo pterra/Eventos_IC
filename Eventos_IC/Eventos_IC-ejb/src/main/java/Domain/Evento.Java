@@ -60,7 +60,7 @@ public class Evento implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Usuario)) {
+        if (!(object instanceof Evento)) {
             return false;
         }
         Evento other = (Evento) object;
